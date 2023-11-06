@@ -52,7 +52,7 @@ include 'koneksi.php';
       $harga = $_POST['harga'];
       $nama_file = $_FILES['gambar']['name'];
       $source = $_FILES['gambar']['tmp_name'];
-      $folder = '../img/menu/';
+      $folder = 'img/menu/';
 
       move_uploaded_file($source, $folder.$nama_file);
       $insert = mysqli_query($koneksi, "INSERT INTO produk VALUES (NULL, '$nama', '$harga', '$nama_file')");

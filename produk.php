@@ -8,7 +8,7 @@ $produk = mysqli_query($koneksi, "SELECT * FROM produk");
 
 <head>
 
-<link rel="icon" href="favicon.ico" type="image" />
+    <link rel="icon" href="favicon.ico" type="image" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesen Kopi</title>
@@ -29,8 +29,8 @@ $produk = mysqli_query($koneksi, "SELECT * FROM produk");
     <br>
     <br>
     <br>
-    
- 
+
+
     <nav class="navbar">
         <a href="#" class="navbar-logo">Pesen<span>Kopi</span>.</a>
 
@@ -39,31 +39,31 @@ $produk = mysqli_query($koneksi, "SELECT * FROM produk");
             <a href="index.php#about">Tentang Kami</a>
             <a href="produk.php#menu">Menu</a>
             <a href="index.php#contact">Kontak</a>
-           
+
         </div>
 
         <div class="navbar-extra">
-        <a href="logout.php#logout">Logout</a>
+            <a href="logout.php#logout">Logout</a>
         </div>
     </nav>
-   
+
 
     <seciton id="menu" class="menu">
         <h2><span>Menu</span> Kami</h2>
         <div class="row">
-            <?php foreach($produk as $result) : ?>
-            <div class="menu-card">
-                <img src="img/menu/<?= $result['gambar'] ?>" alt="es pisang ijo" class="menu-card-img">
-                <h3 class="menu-card-title"><?= $result['nama_menu'] ?></h3>
-                <p class="menu-card-price">IDR <?= $result['harga'] ?>K</p>
-                <a href="beli.php?id_menu=<?php echo $result['id_menu']; ?>" style="color: red; text-decoration: none;">
+            <?php foreach ($produk as $result) : ?>
+                <div class="menu-card">
+                    <img src="img/menu/<?= $result['gambar'] ?>" alt="es pisang ijo" class="menu-card-img">
+                    <h3 class="menu-card-title"><?= $result['nama_menu'] ?></h3>
+                    <p class="menu-card-price">IDR <?= $result['harga'] ?>K</p>
+                    <a href="beli.php?id_menu=<?php echo $result['id_menu']; ?>" style="color: red; text-decoration: none;">
                         <button type="button" style="background-color: #b6895b; border-radius: 0.2rem; padding: 0.3rem 1rem; color: white;">Pesan</button>
                     </a>
-            </div>
+                </div>
             <?php endforeach ?>
         </div>
     </seciton>
-   
+
     <footer>
         <div class="social">
             <a href="https://www.instagram.com/pesenkopi_id/"><i data-feather="instagram"></i></a>
@@ -81,11 +81,11 @@ $produk = mysqli_query($koneksi, "SELECT * FROM produk");
         </div>
     </footer>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script>
         feather.replace();
     </script>
+
 
     <script src="js/script.js"></script>
 </body>
